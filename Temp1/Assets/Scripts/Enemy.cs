@@ -34,16 +34,16 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         meleeAttack.enabled = false;        //밀리 어택 컬리젼을 꺼 둠
-        StartCoroutine(Attack());           //코루틴 테스트용 임시 코드
+        //StartCoroutine(Attack());           //코루틴 테스트용 임시 코드
     }
     void Thinking()
     {
 
     }
 
-    IEnumerator Attack()
-    {
-        meleeAttack.enabled = true;         //밀리어택의 컬리젼을 켜 줌
-        anim.SetBool("isAttack", true);
-    }
+    //IEnumerator Attack()
+    //{
+    //    meleeAttack.enabled = true;         //밀리어택의 컬리젼을 켜 줌
+    //    anim.SetBool("isAttack", true);
+    //}
 }

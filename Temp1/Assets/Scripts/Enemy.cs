@@ -53,18 +53,17 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        MoveToTarget();
+        AnimationTest();                     // 애니메이션 테스트 메소드 1,2,3,4
+        MoveToTarget();                     // 타겟을 향이 이동하는 메소드
     }
 
     private void MoveToTarget()
     {
-        targetDirection = (target.position - transform.position).normalized;
-        AnimationTest();
-        rb.MovePosition(transform.position + targetDirection * Time.deltaTime * moveSpeed);
-        transform.LookAt(target);
-        isChase = true;
-        anim.SetBool("isWalk", true);
-
+        targetDirection = (target.position - transform.position).normalized;                //타겟 위치의 방향
+        rb.MovePosition(transform.position + targetDirection * Time.deltaTime * moveSpeed); //리지드바디를 사용하여 타겟으로 이동
+        transform.LookAt(target);                                                           //Lookat을 사용하여 타겟 바라보기
+        isChase = true;                                                                     // 이동중임을 알리는 bool 값
+        anim.SetBool("isWalk", true);                                                       // walk 애니메이션 활성화
     }
 
     private void AnimationTest()
@@ -82,11 +81,6 @@ public class Enemy : MonoBehaviour
             StartCoroutine(Action4());
     }
 
-    void ChaseStart()
-    {
-        isChase = true;
-        anim.SetBool("isWalk", true);
-    }
     IEnumerator Action1()
     {
         anim.SetBool("isAttack", true);
@@ -126,16 +120,5 @@ public class Enemy : MonoBehaviour
         isDieTest = false;
         StopCoroutine(Action4());
     }
-    //IEnumerator Action()
-    //{
-    //    meleeAttack.enabled = true;         //밀리어택의 컬리젼을 켜 줌
-    //    anim.SetBool("isAttack", true);
-    //    int actionNum = Random.Range(0, 4);
-    //    switch (actionNum)
-    //    {
-    //        case 0:
-    //            anim.SetBool("isAttack", true);
-    //            break;
-    //    }
-    //}
+    
 }

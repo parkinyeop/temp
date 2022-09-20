@@ -983,14 +983,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 3
-  curHealth: 0
-  maxHealth: 0
+  curHealth: 100
+  maxHealth: 100
   target: {fileID: 0}
+  moveSpeed: 3
+  rotSpeed: 1
   projectile: {fileID: 0}
   meleeAttack: {fileID: 0}
   nav: {fileID: 0}
-  rigid: {fileID: 0}
-  boxCollider: {fileID: 0}
+  rb: {fileID: 0}
+  capsuleCollider: {fileID: 0}
   anim: {fileID: 0}
   isChase: 0
   isAttack: 0

@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1972950870096873511
 Transform:
   m_ObjectHideFlags: 0
@@ -147,14 +147,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 1
-  curHealth: 0
-  maxHealth: 0
+  curHealth: 100
+  maxHealth: 100
   target: {fileID: 0}
+  moveSpeed: 7
+  rotSpeed: 1
   projectile: {fileID: 0}
-  meleeAttack: {fileID: 0}
+  meleeAttack: {fileID: 3417546833848006894}
   nav: {fileID: 0}
-  rigid: {fileID: 0}
-  boxCollider: {fileID: 0}
+  rb: {fileID: 0}
+  capsuleCollider: {fileID: 0}
   anim: {fileID: 0}
   isChase: 0
   isAttack: 0
